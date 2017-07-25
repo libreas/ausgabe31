@@ -61,8 +61,7 @@ wartend. Als wäre die Zeit 1993 stehen geblieben. Sie sind jung, sie
 sind stark. Vielleicht. Kennen sie die Bibliothek? Eigentlich hätte man
 sie fragen können.
 
-\[Abbildung Stadtbibliothek Buch / Bildunterschrift: *Die
-Stadtbibliothek Berlin-Buch*\]
+![Die Stadtbibliothek Berlin-Buch](img/Bibliothek-Buch-1.jpg)
 
 "Wir haben hier in der Tat viele Kinder und Jugendliche, die nicht in
 intakten Verhältnissen leben." Berichtet Frau Tiepke in der kleinen
@@ -108,8 +107,7 @@ Stadtteils braucht die Bibliothek. Und könnte sicher noch viel mehr
 vertragen. Aber bereits die Tatsache, dass sie von Montag bis Freitag
 geöffnet ist, ist bereits viel wert.
 
-\[Abbildung Stadtbibliothek Karow / **Bildunterschrift: Die
-Stadtbibliothek Berlin-Karow**\]
+![Die Stadtbibliothek Berlin-Karow](img/Bibliothek-karow-1.jpg)
 
 Dessen wird man sich jedenfalls bewusst, wenn man knapp zwei Kilometer
 entfernt und südlich des Berliner Rings die Achillesstraße in Karow

@@ -185,7 +185,7 @@ ist spürbar für viele auch eine Teilhabeeinrichtung, was sich
 unterschiedlich manifestiert und nicht immer nur zu harmonischen
 Situationen führt.
 
-[](img/pankow-volksbuecherei.jpg)
+![](img/pankow-volksbuecherei.jpg)
 
 Noch eine Herausforderung also für den neuen Leiter. Und auch die gilt
 es zu integrieren, in die Entwicklung bedarfsgerechter Dienstleistungen

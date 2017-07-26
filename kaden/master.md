@@ -1,14 +1,9 @@
----
-title: |
-    []{#_7svzy2rri3g2 .anchor}Shoebox Science Kits und 155 weitere
-    Bibliotheksideen aus dem Jahr 1977
----
 
 Rezension zu:
 
-Dale E. Schaffer, Public Collectors (2017 \[1977\]): LIBRARY EXCAVATIONS
-\#5: A HANDBOOK OF LIBRARY IDEAS. Chicago, Il: Public Collectors, 40
-Seiten, 6 \$
+Dale E. Schaffer, Public Collectors (2017 [1977]): LIBRARY EXCAVATIONS
+#5: A HANDBOOK OF LIBRARY IDEAS. Chicago, Il: Public Collectors, 40
+Seiten, 6 $
 
 von Ben Kaden
 
@@ -34,18 +29,18 @@ Art postume Würdigung. Während seiner Karriere hatte er sich auf das
 Beraten von Bibliotheken spezialisiert, was sich heute vor allem in
 seiner eindrucksvollen Publikationsliste zeigt, die außerdem noch mehr
 als zwei Dutzend Bücher Regionalgeschichte zu seiner Heimatstadt Salem,
-Ohio umfasst. Begonnen hatte die akademische Laufbahn des am 17. April
-1929 in eben diesem Salem geborenen Dale E. Shaffer mit einem Bachelor
-in Betriebswirtschaft, den er um einen Master in Library Science an der
-Kent State University ergänzte. Weiter ging es zunächst in einem
-erwerbsbiografischen Patchwork-Modus, wie man ihn auch heute mit einem
-Abschluss in Bibliothekswissenschaft gut kennt: ein Jahr (1956-1957) bei
-General Electric, danach Dozent für Wirtschaft am Bethany College in
-West Virginia, ab 1960 ein Jahr Technical Research Librarian in der
-Schulverwaltung von South Bend, Indiana. Im frühen 1963 begann er als
-Bibliothekar des Glenville State College in West Virginia, wie die
-Ausgabe der College-Zeitung Glenville Mercury vom 13.02.1963 auf der
-Titelseite unter einer Bildleiste zur Wahl des Campus Cover Girl
+Ohio umfasst. Begonnen hatte die akademische Laufbahn des am
+17. April 1929 in eben diesem Salem geborenen Dale E. Shaffer mit einem
+Bachelor in Betriebswirtschaft, den er um einen Master in Library
+Science an der Kent State University ergänzte. Weiter ging es zunächst
+in einem erwerbsbiografischen Patchwork-Modus, wie man ihn auch heute
+mit einem Abschluss in Bibliothekswissenschaft gut kennt: ein Jahr
+(1956–1957) bei General Electric, danach Dozent für Wirtschaft am
+Bethany College in West Virginia, ab 1960 ein Jahr Technical Research
+Librarian in der Schulverwaltung von South Bend, Indiana. Im frühen 1963
+begann er als Bibliothekar des Glenville State College in West Virginia,
+wie die Ausgabe der College-Zeitung Glenville Mercury vom 13.02.1963 auf
+der Titelseite unter einer Bildleiste zur Wahl des Campus Cover Girl
 berichtete und außerdem alle Beteiligten auflistete, die ihn bei
 Reorganisation und Betrieb der Bibliothek unterstützten und die hier
 ruhig mal für eine Sekunde kurzen Aufschimmerns aus dem Schatten der
@@ -66,7 +61,7 @@ E. Shaffer zur Capital University in Columbus, Ohio und organisierte
 selbige ebenfalls gründlich um und neu. Später baute er das
 Bibliothekssystem des neu gegründeten Ocean County College in Toms
 River, New Jersey auf. Im Jahr 1968 veröffentlichte er unter dem schönen
-Titel *The maturity of librarianship as a profession* (Metuchen, N. J. :
+Titel *The maturity of librarianship as a profession* (Metuchen, N. J. :
 Scarecrow Press) das erste von zahlreichen Büchern, in denen er seine
 Erfahrungen zur Bibliotheksentwicklung aufarbeitete. In seinem Erstling
 legte er vor allem dar, dass die Bibliotheksarbeit zwar eine Reihe von
@@ -96,8 +91,8 @@ Konsequenterweise eröffnet er mit den Grundanforderungen an, so eine
 ad-hoc-Übersetzung, Kreativbibliothekar\_innen. Zwölf sind es, von
 grundsätzlicher Neugier, Willen zur Vorstellungskraft, Sensibilität,
 Abstraktionsvermögen, Unabhängigkeit, Ausdauer und Mut. Interessant und
-als schöne Variation zu stereotypen Vorstellungen ist der Punkt Nummer 9
-– Challenged by Disorder:
+als schöne Variation zu stereotypen Vorstellungen ist der Punkt
+Nummer 9 – Challenged by Disorder:
 
 "He \[der Kreativbibliothekar\] thrives on chaos and disorganization,
 considering it a problem to be solved."
@@ -113,7 +108,7 @@ wie man bei der Idee Nummer 140 – Tool-Lending Pool – lernt:
 shortages of World War II. Now, power tools can be borrowed from some
 libraries for three days; hand tools for a week. Included are
 tachometersm strobe lights, and various items for automobile tuneups."
-(S.35)
+(S. 35)
 
 Und plötzlich erkennt man, dass auch Baumärkte und Bibliotheken ihr
 Serviceprofil einander annähern können.
@@ -174,17 +169,17 @@ müssen – oder sollten (siehe auch Idee 105 – Nursing home library).
 
 Erwartungsgemäß kann man an der Ideensammlung schließlich Formen des
 Medienwandels gut nachvollziehen und sowohl als Avantgarde wie auch als
-Sackgasse. Sehr wegweisend wirkt die Idee Nummer 30 namens Computerized
+Sackgasse. Sehr wegweisend wirkt die Idee Nummer 30 namens Computerized
 Book Circulation, die ein vernetztes System zwischen Haupt- und
 Zweigbibliotheken zur übergreifenden Recherche, Reservierung und
 Ausleihverwaltung vorschlägt inklusive telephonischer Bestellung. Und
 überhaupt wusste Dale E. Shaffer: "Computers have great potential in
 libraries because of their ability to store information and cough it up
-on demand." (Idee 95 – Micro-Computers) Das ist eindeutig ein Treffer.
+on demand." (Idee 95 – Micro-Computers) Das ist eindeutig ein Treffer.
 
 Ganz aus der Mode, jedenfalls an der Schnittstelle zur alltäglichen
 Bibliotheksnutzung, sind dagegen die damaligen Zukunftsmedien der
-Mikroformen (unter anderem Idee Nummer 146 – Ultramicrofiche) und auch
+Mikroformen (unter anderem Idee Nummer 146 – Ultramicrofiche) und auch
 Videokassetten – "as a new system of delivering information" – und
 Videodiscs (148) spielen heute so wenig eine Rolle wie morgen DVDs. Ein
 Satz wie

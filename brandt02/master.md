@@ -29,7 +29,7 @@ Körper, Sexualität, Krankheit und Tod, Glaube, Gewalt und vieles mehr.
 Rund 4300 Titel gehören derzeit zum Bestand – ergänzt um vielfältige
 Spielmaterialien und Hörbücher.[^1]
 
-![](img/abbildung.jpg)
+![](img/abbildung1.jpg)
 
 ### "Ich finde nicht die richtigen Worte"
 

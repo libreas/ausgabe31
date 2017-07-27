@@ -19,7 +19,7 @@ zunächst, aber nicht ungemütlich. Es gibt Tee und wir schauen gemeinsam
 auf eine große Tafel. Die ist sehr gut gefüllt. Bestandsaufnahme trifft
 auf To-Do-Listen trifft auf Kinderzeichnungen, was fast zwingend wirkt,
 machen doch je nach Standort Kinderbücher bis zu 60 % der Entleihungen
-aus. Am meisten im Standort an der per Klischee mittlerweile
+aus. Am meisten am Standort an der per Klischee mittlerweile
 wohlhabendsten Ecke des Bezirks – in der Bibliothek am Wasserturm an der
 Prenzlauer Allee. Warum eigentlich? Wo kultureller und materieller
 Wohlstand sich so gelungen verbinden, wie dort, braucht man doch die

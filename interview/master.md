@@ -145,7 +145,7 @@ ihre Frustration ventilieren oder einfach frustriert gehen. Hier wünscht
 sich Danilo, dass auch die Nutzer\_innen achtsamer sind und wissen, dass
 die Infrastruktur nicht ihr Privatbesitz ist. Und er plant die
 Anschaffung von Tablets, um den Bedarf auffangen zu können. Im Zuge des
-Projektes "Digitale Welten" wurde bereits ein IPad-Koffer angeschafft
+Projektes "Digitale Welten" wurde bereits ein iPad-Koffer angeschafft
 und auch ein Budget für Apps ist vorhanden.
 
 Andere außerplanmäßige Ausgaben können beziehungsweise müssen auch durch

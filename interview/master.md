@@ -41,7 +41,7 @@ Was vor allem die Mitarbeiter\_innen herausfordert, die größtenteils in
 einem anderem Bibliothekssystem, nämlich dem der DDR, gelernt haben.
 Diese Dynamik gilt es aufzufangen und wir lernen alle immer sehr viel
 dazu." Dass das Bibliothekssystem in Pankow lange Jahre ohne richtige
-Leitung war ist für diese Praxis gar nicht nur schlecht. "Man lernte,
+Leitung war, ist für diese Praxis gar nicht nur schlecht. "Man lernte,
 sich selbst zu organisieren." Obwohl eine solche Aussage vermutlich mehr
 in Richtung Zweckoptimismus weist. Und die Frage aufwirft, ob sich die
 Mitarbeiter\_innen dann aber **motiviert** unter einer neuen Leitung

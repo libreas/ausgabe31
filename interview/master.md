@@ -51,7 +51,7 @@ habe die ersten Monate genutzt, um mich wirklich mit allen zu
 Einzelgesprächen zu treffen." Es gab Tee, Signale des aufrichtigen
 Interesses, die Bereitschaft zum Zuhören und dank dieser Mischung den
 Abbau von **Vorurteilen** und **Ängsten**. "Das war schon eine
-interessante Erfahrungen. Das Bibliothekswesen im Bezirk war über
+interessante Erfahrung. Das Bibliothekswesen im Bezirk war über
 Jahrzehnte vor allem durch Abbau, Einsparungen und Kürzungsmaßnahmen
 gekennzeichnet. Einzelgespräche in diesen Einrichtungen bedeuteten nie
 etwas Gutes. Entweder wurde eine Umorientierung angeregt, eine

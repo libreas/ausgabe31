@@ -110,7 +110,7 @@ haben."
 Dass einige Engpässe durch Ehrenamtliche aufgefangen werden, sieht
 Danilo nicht als problematisch an, zumal ein Standort im Bezirk seit
 Jahren ausschließlich durch Ehrenamtliche geführt wird. Sicherlich
-schürt der Einsatz von Ehrenamtlichen auch dahingehend Ängste bei den
+schürt der Einsatz von Ehrenamtlichen auch dahingehend **Ängste** bei den
 Mitarbeiter\_innen, dass sie ersetzbar sind und der Bezirk auf diese Art
 ausgebildetes Personal einsparen könnte. Eine Ehrenamtlichen-Bibliothek
 sei aber erstmal besser als keine Bibliothek, so Danilo sinngemäß. Und
@@ -141,7 +141,7 @@ für die wenigen, natürlich *zu* wenigen, Webterminals abzuschaffen und
 eine unbegrenzte Nutzung zuzulassen. Das Problem ist jedoch, dass hier
 der frühe Nutzer auch die Maus manchmal den ganzen Tag nicht mehr
 loslässt und andere Nutzer\_innen nach zwei Stunden Wartezeit entweder
-ihre Frustration ventilieren oder einfach frustriert gehen. Hier wünscht
+ihre Frustration ventilieren oder einfach **frustriert** gehen. Hier wünscht
 sich Danilo, dass auch die Nutzer\_innen achtsamer sind und wissen, dass
 die Infrastruktur nicht ihr Privatbesitz ist. Und er plant die
 Anschaffung von Tablets, um den Bedarf auffangen zu können. Im Zuge des

@@ -29,7 +29,7 @@ Körper, Sexualität, Krankheit und Tod, Glaube, Gewalt und vieles mehr.
 Rund 4300 Titel gehören derzeit zum Bestand – ergänzt um vielfältige
 Spielmaterialien und Hörbücher.[^1]
 
-![](Brandt02_ Bild01.jpg)
+![](Brandt02_Bild01.jpg)
 
 ### "Ich finde nicht die richtigen Worte"
 
@@ -87,7 +87,7 @@ feine Wechselspiel, die immer wieder zu suchende Balance zwischen den
 Geschichten der Bücher und den Geschichten des eigenen Lebens gesucht,
 geschützt und beschrieben hat: Janusz Korczak.
 
-![](Brandt02_ Bild02.jpg)
+![](Brandt02_Bild02.jpg)
 
 ### "Ein Dichter – das ist ein Mensch, der starke Gefühle hat"
 

@@ -1,129 +1,22 @@
 
 
-Das Titelbild möchte Empfindungen im Zuge der Urheberrechtsnovellierung anhand der Kommentare der Unterstützer des Appells "Publikationsfreiheit - für eine starke Bildungsrepublik"[^1] einfangen. Am 30. Juni hat der Bundestag Schrankenregelungen zur Nutzung urheberrechtlich geschützter Werke in Bildung und Forschung reformiert, die zum 1. März 2018 in Kraft treten werden. Einzelne Verleger wollten mit dem Appell im Vorfeld der Abstimmung öffentlichkeitswirksam auf ihre Anliegen hinweisen und forderten zugleich den Bundestag auf, die Abstimmung über den Gesetzentwurf der Bundesregierung in die nächste Legislaturperiode zu verschieben. Während der Appell seitens der Frankfurter Allgemeinen Zeitung positiv aufgenommen wurde, warfen Bibliothekare wie Eric Steinhauer der Kampagne eine Irreführung von Wissenschaft, Politik und Öffentlichkeit vor. Zudem wären die Unterzeichnerinnen und Unterzeichner des Appells nicht repräsentativ für die wissenschaftlich Beschäftigten an Hochschulen und Forschungseinrichtungen in Deutschland.[^2]
+Das Titelbild dokumentiert Empfindungen im Zuge der Urheberrechtsnovellierung anhand der Kommentare der Unterstützer des Appells "Publikationsfreiheit - für eine starke Bildungsrepublik"[^1]. Am 30. Juni hat der Bundestag Schrankenregelungen zur Nutzung urheberrechtlich geschützter Werke in Bildung und Forschung reformiert, die zum 1. März 2018 in Kraft treten werden. Einzelne Verleger wollten mit dem Appell im Vorfeld der Abstimmung öffentlichkeitswirksam auf ihre Anliegen hinweisen und forderten zugleich, das Reformvorhaben in die nächste Legislaturperiode zu verschieben. Während der Appell seitens der Frankfurter Allgemeinen Zeitung positiv aufgenommen wurde, warfen Bibliothekare wie Eric Steinhauer der Kampagne eine Irreführung von Wissenschaft, Politik und Öffentlichkeit vor. Zudem seien die Unterzeichnerinnen und Unterzeichner des Appells nicht repräsentativ für alle wissenschaftlich Beschäftigten an Hochschulen und Forschungseinrichtungen in Deutschland.[^2]
 
-Was bleibt, sind bis dato 2.357 Kommentare der Unterzeichner des Appells. Die Frage, die uns beschäftigt hat, war, welche Stimmungen und Empfindungen sich gegenüber der geplanten Urheberrechtsreform in den Kommentaren ausdrücken. Zu diesem Zwecke haben wir eine Sentimentanalyse durchgeführt. Die Sentimentanalyse ist ein Verfahren des Text-Mining, das mit Methoden des maschinellen Lernens, Aussagen als positiv oder negativ charakterisiert. Voraussetzung ist ein Korpus, das positiv und negativ konnotierte Wörter oder Wortgruppen enthält und entsprechend gewichtet. Zwar existieren auch für die deutsche Sprache entsprechende Wortschätze.[^3] Wir haben uns jedoch aufgrund der einfachen Nachnutzung für die Text Analytics API von Microsoft entschieden, die insbesondere auf die Unterützung von Kommunikationsprozessen in Unternehmen zielt.[^4] Die Analyse erfolgte mittels der statistischen Programmierumgebung R und folgt der Methodendarstellung im kürzlich erschienen Buch "Text Mining with R - A Tidy Approach" von Julia Silge und David Robinson.[^5]
+Was bleibt, sind bis dato 2.357 Kommentare der Unterzeichner des Appells. Die Frage, die uns angesichts unseres Schwerpunkts "Emotionen " beschäftigt hat, war, welche Stimmungen und Empfindungen sich gegenüber der geplanten Urheberrechtsreform in den Kommentaren ausdrücken und wie sie sich für ein Titelbild festhalten lassen. Zu diesem Zwecke geeignet sind Sentimentanalysen. Die Sentimentanalyse ist ein Verfahren des Text-Mining, das mit Methoden des maschinellen Lernens, Aussagen als positiv oder negativ charakterisiert. Voraussetzung ist ein Korpus, das positiv und negativ konnotierte Wörter oder Wortgruppen enthält und entsprechend gewichtet. Zwar existieren auch für die deutsche Sprache entsprechende Wortschätze.[^3] Wir haben uns jedoch aufgrund der einfachen Nachnutzung für die Text Analytics API von Microsoft entschieden, die insbesondere auf die Unterstützung von Kommunikationsprozessen in Unternehmen zielt und somit weniger für wissenschaftliche Auswertungen geeignet ist.[^4] Die Umsetzung erfolgte mittels der statistischen Programmierumgebung R als dynamischer Report in R Markdown[^6] und folgt der Methodendarstellung im kürzlich erschienen Buch "Text Mining with R - A Tidy Approach" von Julia Silge und David Robinson.[^5]
 
-Nachfolgend beschreiben wir, wie wir die Daten gewonnen und die Abbildung für das Titelbild visualisiert haben. Zunächst wurden die Kommentare aus der Webseite der Initiative extrahiert, Formatierungszeichen entfernt und ein Datensatz zum Abgleich mit der Text Analytics API erstellt.
-
-
-```r
-# required libraries
-library(dplyr)
-library(httr)
-library(xml2)
-
-u <- "https://www.publikationsfreiheit.de/der-appell/"
-req <- httr::GET(u) %>%
-  httr::content()
-texts <-
-  xml2::xml_find_all(req, '//*[@id="packery-container"]//section//article') %>%
-  xml2::xml_text()
-#
-text_df <- data_frame(texts) %>%
-  mutate(text = gsub(
-    "\n                                Ich unterstütze die Publikationsfreiheit, weil ...\n",
-    "",
-    texts
-  )) %>%
-  mutate(text = gsub("\\n.*$", "", text)) %>%
-  mutate(text = gsub("         ", "", text)) %>%
-  mutate(id = rownames(.)) %>%
-  select(text, id) %>%
-  mutate(language = "de")
-```
-
-
-Die Text Analytics API ist mittels eines API-Keys zugriffsbeschränkt und ermöglicht je Aufruf die Analyse von bis 1000 Textabschnitten. Der Key ist bei uns definiert als Funktion `text_get_key()`
-
-
-```r
-## API CALL
-## The api takes a maximum of 1000 but we got 2357, so let's loop over the data
-
-sentiments <- dplyr::data_frame()
-
-for (i in seq(1, nrow(text_df), by = 1000)) {
-  req <- httr::POST(
-    url = "https://westus.api.cognitive.microsoft.com/text/analytics/v2.0/sentiment",
-    body = jsonlite::toJSON(list(documents = dplyr::slice(
-      text_df, i:(i + 999)
-    )),
-    auto_unbox = TRUE),
-    httr::accept_json(),
-    httr::content_type_json(),
-    httr::add_headers("Ocp-Apim-Subscription-Key" = text_get_key())
-  ) %>%
-    httr::content()
-  out <- req$documents %>%
-    dplyr::bind_rows()
-  sentiments <- dplyr::bind_rows(sentiments, out)
-}
-```
-
-Ergebnis ist eine Tabelle, die je Kommentar einen Wert zwischen 0 (negativ) und  1 (positiv) zuweist.
-
-
-```r
-sentiments
-#> # A tibble: 2,357 x 2
-#>        score    id
-#>        <dbl> <chr>
-#>  1 0.5619398     1
-#>  2 0.9084251     2
-#>  3 0.5422977     3
-#>  4 0.5671694     4
-#>  5 0.5663299     5
-#>  6 0.5910998     6
-#>  7 0.2581929     7
-#>  8 0.6130945     8
-#>  9 0.5544790     9
-#> 10 0.7222222    10
-#> # ... with 2,347 more rows
-```
-
-Für die Abbildung möchten wir allerdings 0 als neutralen Wert definieren und normalisieren den Sentimentwert des Scores entsprechend der neuen Skale, die von -0.5 und +0.5 reicht.
+Nachfolgend beschreiben wir, wie wir die Daten gewonnen und die Abbildung für das Titelbild visualisiert haben. Zunächst wurden die Kommentare aus der Webseite der Initiative Publikationsfreiheit extrahiert, Formatierungszeichen entfernt und ein Datensatz zum Abgleich mit der Text Analytics API erstellt. Die Text Analytics API ist mittels eines API-Keys zugriffsbeschränkt und ermöglicht je Aufruf die Analyse von bis 1000 Textabschnitten.
 
 
 
-```r
-sentiments_df <- left_join(text_df, sentiments, by = "id") %>%
-  mutate(score_nor = score - 0.5) %>%
-  mutate(score_category = ifelse(score_nor > 0, "positiv", "negativ"))
-# export
-library(readr)
-readr::write_csv(sentiments_df, "sentiment_publikationsfreiheit.csv")
-```
-
-Der Datensatz ist unter [sentiment_publikationsfreiheit.csv](sentiment_publikationsfreiheit.csv) verfügbar.
-
-Die Sentimentwerte werden abschließend als Säulendiagramm visualisiert, das jeden Kommentar mit seinem Sentimentwert abbildet:
 
 
-```r
-# plot
-library(ggplot2)
-ggplot(sentiments_df, aes(id, score_nor, fill = score_category)) +
-  geom_bar(stat = "identity") +
-  theme(
-    axis.title.x = element_blank(),
-    axis.text.x = element_blank(),
-    axis.ticks.x = element_blank()
-  ) +
-  ylab("Empfindungswert") +
-  guides(fill = guide_legend(reverse = TRUE),
-         colour = guide_legend(reverse = TRUE)) +
-  scale_fill_discrete(name = "Empfindung") +
-  ggtitle(
-    "Emotionsanalyse der Kommentare der Unterzeichner der Initiative\nPublikationsfreiheit für bessere Bildung"
-  ) +
-  theme(plot.title = element_text(size = 12, face = "bold"))
-```
+Ergebnis ist eine Tabelle, die jedem Kommentar einen Wert zwischen 0 (negativ) und  1 (positiv) zuweist. Für die Abbildung wollten wir allerdings 0 als neutralen Wert definieren und normalisierten den Sentimentwert des Scores entsprechend einer neuen Skale, die von -0.5 und +0.5 reicht.
 
 
-```r
-ggsave("img/sentiment_abbbildung.png", dpi = 450)
-```
+
+
+Der so gewonnene Datensatz ist unter [sentiment_publikationsfreiheit.csv](sentiment_publikationsfreiheit.csv) verfügbar. Die Sentimentwerte wurden abschließend als Säulendiagramm visualisiert, das jeden Kommentar mit seinem Sentimentwert abbildet:
+
 
 ![Sentimentanalyse Appell Publikationsfreiheit](img/sentiment_abbbildung.png)
 
@@ -133,7 +26,7 @@ Bereits die Vorgabe "Ich unterstütze die Publikationsfreiheit, weil.." leitete 
 
 Die als negativ ermittelten Aussagen sind oft leider wenig einleuchtend, auch weil das Konzept Sentiment in diesem Rahmen zu unscharf qualifiziert wird. Zugleich finden sich zahlreiche Aussagen, die in ihrer Logik selbst eher fragwürdig sind. Ein Beispiel: "[Ich unterstütze die Publikationsfreiheit, weil] ich damit befürchte, dass der Weg zu TTIP, TiSa und Ceta geebnet werden soll/wird." Aufmerksame Lesende mögen hier schlussfolgern, dass der Kommentator nicht etwa impliziert, dass die Publikationsfreiheit (="damit") TTIP vorbereitet. Sondern vielmehr die Urheberrechtsreform. Aber es ist zu bezweifeln, dass eine automatisierte Spracherkennung damit zurecht kommt. Abgesehen davon, dass der Kommentar auch inhaltlich auf einer sehr schiefen Bahn unterwegs ist.
 
-Eine weitere notwendige Einschränkung ist also, dass das Verfahren selbst zwar quantitativ sauber ist, die bekannten semantischen Herausforderungen natürlichsprachlicher Kommunikation aber nur eingeschränkt berücksichtigt. Der Blick ins Detail zeigt, wie sehr viele Kommentare hinsichtlich der Konnotationsermittlung tatsächlich eine intellektuelle Interpretation benötigten. Bei nicht wenigen der Kommentare ermöglicht auch diese keine eindeutige Zuordnung. Aussagen wie: "..ich nicht möchte, dass die Leistung von AutorInnen und Verlagen entwertet wird" werden vom verwendeten sprachanalytischen Cloud-Dienst als stärker negativ eingeschätzt.  Die Aussage "...ich in den Plänen der Bundesregierung zum Urheberrecht eine massive Bedrohung der Wissenschaftsfreiheit sehe" wird dagegen eher überraschend als stärker positiv bewertet. "Ich unterstütze die Publikationsfreiheit, weil vor allem Bildung wichtig ist" tendiert wider Erwarten ins Negative.  Zwei Dinge lassen sich daraus schlussfolgern: Einerseits ist die Stimmung nicht immer so eindeutig, dass sie algorithmisch sauber und nachvollziehbar sortiert werden können. Und daher, zweitens, eignen sich Verfahren wie das Beschriebene mit ihrem aktuellen Stand vor allem dazu, Auffälligkeiten zu identifizieren, denen man über eine qualitative Folgeanalyse nachspüren kann. Wir laden unsere Leserinnen und Leser herzlich dazu ein und erklären uns gern bereit, entsprechende Arbeiten in kommenden Ausgaben von LIBREAS oder auch im LIBREAS. Weblog nachzureichen.
+Eine weitere notwendige Einschränkung ist also, dass das Verfahren selbst zwar quantitativ sauber ist, die bekannten semantischen Herausforderungen natürlichsprachlicher Kommunikation aber nur eingeschränkt berücksichtigt. Der Blick ins Detail zeigt, wie sehr viele Kommentare hinsichtlich der Konnotationsermittlung tatsächlich eine intellektuelle Interpretation benötigten. Bei nicht wenigen der Kommentare ermöglicht auch diese keine eindeutige Zuordnung. Aussagen wie: "..ich nicht möchte, dass die Leistung von AutorInnen und Verlagen entwertet wird" werden vom verwendeten sprachanalytischen Cloud-Dienst als stärker negativ eingeschätzt.  Die Aussage "...ich in den Plänen der Bundesregierung zum Urheberrecht eine massive Bedrohung der Wissenschaftsfreiheit sehe" wird dagegen eher überraschend als stärker positiv bewertet. "Ich unterstütze die Publikationsfreiheit, weil vor allem Bildung wichtig ist" tendiert wider Erwarten ins Negative.  Zwei Dinge lassen sich daraus schlussfolgern: Einerseits ist die Stimmung nicht immer so eindeutig, dass sie sich in wenigen Schritten algorithmisch sauber und nachvollziehbar sortieren lässt. Und daher, zweitens, eignen sich Verfahren wie das Beschriebene mit ihrem aktuellen Stand vor allem dazu, Auffälligkeiten zu identifizieren, denen man über eine qualitative Folgeanalyse nachspüren kann. Wir laden unsere Leserinnen und Leser herzlich dazu ein und erklären uns gern bereit, entsprechende Arbeiten in kommenden Ausgaben von LIBREAS oder auch im LIBREAS. Weblog nachzureichen.
 
 
 [^1]: <https://www.publikationsfreiheit.de/>
@@ -145,3 +38,5 @@ Eine weitere notwendige Einschränkung ist also, dass das Verfahren selbst zwar 
 [^4]: <https://azure.microsoft.com/en-us/services/cognitive-services/text-analytics/>
 
 [^5]: <http://tidytextmining.com/>
+
+[^6]: [https://github.com/libreas/ausgabe31/blob/master/notiz/master.Rmd](https://github.com/libreas/ausgabe31/blob/master/notiz/master.Rmd)

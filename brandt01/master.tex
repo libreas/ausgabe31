@@ -1,4 +1,4 @@
-\documentclass[a4paper,
+  \documentclass[a4paper,
 fontsize=11pt,
 %headings=small,
 oneside,
@@ -37,6 +37,7 @@ final
 \usepackage[normalem]{ulem} %emphasize weiterhin kursiv
 \usepackage[flushmargin,ragged]{footmisc} % left align footnote
 \usepackage{ccicons} 
+\usepackage{hyperxmp}
 
 \usepackage{listings}
 
@@ -67,7 +68,9 @@ final
 \fancyhead[L]{S. Brandt \\ %author
 LIBREAS. Library Ideas, 31 (2017). % journal, issue, volume.
 \href{http://nbn-resolving.de/}
-{}} % urn
+{}} % urn 
+% recommended use
+%\href{http://nbn-resolving.de/}{\color{black}{urn:nbn:de...}}
 \fancyhead[R]{\thepage} %page number
 \fancyfoot[L] {\ccLogo \ccAttribution\ \href{https://creativecommons.org/licenses/by/3.0/}{\color{black}Creative Commons BY 3.0}}  %licence
 \fancyfoot[R] {ISSN: 1860-7950}
@@ -78,7 +81,13 @@ LIBREAS. Library Ideas, 31 (2017). % journal, issue, volume.
 \setcounter{page}{1}
 
 \usepackage[colorlinks, linkcolor=black,citecolor=black, urlcolor=blue,
-breaklinks= true]{hyperref}
+breaklinks= true,]{hyperref}
+
+\hypersetup{%
+      pdfcopyright={CC BY 4.0},
+      pdflicenseurl={https://creativecommons.org/licenses/by/4.0/},
+      baseurl={http://libreas.eu/}
+     }
 
 \date{}
 \begin{document}
@@ -313,12 +322,9 @@ füllen.
 
 Entspannt euch -- und fürchtet euch nicht vor der Vielfalt!
 
-<<<<<<< Updated upstream
+%autor
 \begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
 
-=======
-%autor
->>>>>>> Stashed changes
 \textbf{Susanne Brandt}, geb.1964 in Hamburg, Studium in
 Bibliothekswesen und Kulturwissenschaften, Qualifikation
 Rhythmisch-musikalische Erziehung und bibliotherapeutische

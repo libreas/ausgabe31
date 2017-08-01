@@ -37,6 +37,7 @@ final
 \usepackage[normalem]{ulem} %emphasize weiterhin kursiv
 \usepackage[flushmargin,ragged]{footmisc} % left align footnote
 \usepackage{ccicons} 
+\usepackage{hyperxmp}
 
 \usepackage{listings}
 
@@ -77,7 +78,13 @@ LIBREAS. Library Ideas, 31 (2017). % journal, issue, volume.
 \setcounter{page}{1}
 
 \usepackage[colorlinks, linkcolor=black,citecolor=black, urlcolor=blue,
-breaklinks= true]{hyperref}
+breaklinks= true,]{hyperref}
+
+\hypersetup{%
+      pdfcopyright={CC BY 4.0},
+      pdflicenseurl={https://creativecommons.org/licenses/by/4.0/},
+      baseurl={http://libreas.eu/}
+     }
 
 \date{}
 \begin{document}
@@ -160,7 +167,7 @@ weiteres Beratungs- und Publikationsprogramm.
 \begin{figure}
 \centering
 \includegraphics{lib_excavations.png}
-\caption{}
+%\caption{}
 \end{figure}
 
 II

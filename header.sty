@@ -37,6 +37,7 @@ final
 \usepackage[normalem]{ulem} %emphasize weiterhin kursiv
 \usepackage[flushmargin,ragged]{footmisc} % left align footnote
 \usepackage{ccicons} 
+\usepackage{hyperxmp}
 
 \usepackage{listings}
 
@@ -70,7 +71,13 @@ $header-includes$
 $endfor$
 
 \usepackage[colorlinks, linkcolor=black,citecolor=black, urlcolor=blue,
-breaklinks= true]{hyperref}
+breaklinks= true,]{hyperref}
+
+\hypersetup{%
+      pdfcopyright={CC BY 4.0},
+      pdflicenseurl={https://creativecommons.org/licenses/by/4.0/},
+      baseurl={http://libreas.eu/}
+     }
 
 \date{}
 \begin{document}

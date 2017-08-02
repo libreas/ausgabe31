@@ -1,4 +1,4 @@
-\documentclass[a4paper,
+  \documentclass[a4paper,
 fontsize=11pt,
 %headings=small,
 oneside,
@@ -10,7 +10,7 @@ final
 
 \usepackage{synttree}
 \usepackage{graphicx}
-\setkeys{Gin}{width=.8\textwidth} %default pics size
+\setkeys{Gin}{width=.4\textwidth} %default pics size
 
 \graphicspath{{./plots/}}
 \usepackage[ngerman]{babel}
@@ -79,14 +79,14 @@ LIBREAS. Library Ideas, 31 (2017). % journal, issue, volume.
 \setcounter{page}{1}
 
 \usepackage[colorlinks, linkcolor=black,citecolor=black, urlcolor=blue,
-breaklinks= true]{hyperref}
+breaklinks= true,]{hyperref}
 
 \hypersetup{%
       pdfcopyright={CC BY 4.0},
       pdflicenseurl={https://creativecommons.org/licenses/by/4.0/},
       baseurl={http://libreas.eu/}
      }
-     
+
 \date{}
 \begin{document}
 
@@ -147,7 +147,7 @@ Ergebnis ist eine Tabelle, die jedem Kommentar einen Wert zwischen 0
 (negativ) und 1 (positiv) zuweist. Für die Abbildung wollten wir
 allerdings 0 als neutralen Wert definieren und normalisierten den
 Sentimentwert des Scores entsprechend einer neuen Skale, die von -0.5
-und +0.5 reicht.
+bis +0.5 reicht.
 
 Der so gewonnene Datensatz ist unter
 \url{sentiment_publikationsfreiheit.csv} verfügbar. Die Sentimentwerte
@@ -175,12 +175,13 @@ einer Demokratie, für Bildung und eine vielfältige Verlagslandschaft
 unabdingbar ist.}
 
 Bereits die Vorgabe \enquote{Ich unterstütze die Publikationsfreiheit,
-weil..} leitete assoziativ und fast zwangsläufig auf eine Bejahung hin
-und zwar ungeachtet der Frage, ob die Auslegung des Konzeptes durch die
-Initiatoren des Aufrufs auch dem entspricht, was die Kommentierenden mit
-Publikationsfreiheit verbinden bzw. ob der Gesetzesentwurf tatsächlich
-eine Bedrohung derselben darstellte. Die Bahn ist gelegt und die Vorlage
-lädt ein, zu betonen, wie wichtig und gerechtfertigt die Initiative ist.
+weil\ldots{}} leitete assoziativ und fast zwangsläufig auf eine Bejahung
+hin und zwar ungeachtet der Frage, ob die Auslegung des Konzeptes durch
+die Initiatoren des Aufrufs auch dem entspricht, was die Kommentierenden
+mit Publikationsfreiheit verbinden bzw. ob der Gesetzesentwurf
+tatsächlich eine Bedrohung derselben darstellte. Die Bahn ist gelegt und
+die Vorlage lädt ein, zu betonen, wie wichtig und gerechtfertigt die
+Initiative ist.
 
 Die als negativ ermittelten Aussagen sind oft leider wenig einleuchtend,
 auch weil das Konzept Sentiment in diesem Rahmen zu unscharf
@@ -202,8 +203,8 @@ eingeschränkt berücksichtigt. Der Blick ins Detail zeigt, wie sehr viele
 Kommentare hinsichtlich der Konnotationsermittlung tatsächlich eine
 intellektuelle Interpretation benötigten. Bei nicht wenigen der
 Kommentare ermöglicht auch diese keine eindeutige Zuordnung. Aussagen
-wie: \enquote{..ich nicht möchte, dass die Leistung von AutorInnen und
-Verlagen entwertet wird} werden vom verwendeten sprachanalytischen
+wie: \enquote{\ldots{}ich nicht möchte, dass die Leistung von AutorInnen
+und Verlagen entwertet wird} werden vom verwendeten sprachanalytischen
 Cloud-Dienst als stärker negativ eingeschätzt. Die Aussage
 \enquote{\ldots{}ich in den Plänen der Bundesregierung zum Urheberrecht
 eine massive Bedrohung der Wissenschaftsfreiheit sehe} wird dagegen eher

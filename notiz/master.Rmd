@@ -95,7 +95,7 @@ ggplot(sentiments_df, aes(id, score_nor, fill = score_category)) +
          colour = guide_legend(reverse = TRUE)) +
   scale_fill_discrete(name = "Empfindung") +
   ggtitle(
-    "Emotionsanalyse der Kommentare der Unterzeichner der Initiative\nPublikationsfreiheit für bessere Bildung"
+    "Empfindungen in den Kommentaren der Unterzeichner der Initiative\nPublikationsfreiheit für bessere Bildung"
   ) +
   theme(plot.title = element_text(size = 18, face = "bold"))
 ggsave("img/sentiment_abbbildung.png", dpi = 450)
